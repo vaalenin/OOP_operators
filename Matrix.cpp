@@ -28,3 +28,9 @@ operator int ()
 {
   return this->val1 + this->val2;
 }
+
+std::ostream& operator << (std::ostream& os, const Matrix& m)
+{
+    os << "This is Matrix values: val1 = " << m.val1 << ", val2 = " << m.val2 << std::endl;
+    return os;
+}
