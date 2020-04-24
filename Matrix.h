@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+
+std::ostream& operator << (std::ostream& os, const Matrix& dt)
+  
 class Matrix
 {
 public:
@@ -10,6 +14,8 @@ public:
   Matrix& operator ++ (int);
   
   operator int ();
+  
+  friend std::ostream& operator << (std::ostream& os, const Matrix& dt);
 private:
   int val1;
   int val2;
