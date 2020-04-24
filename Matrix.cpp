@@ -60,3 +60,8 @@ std::ostream& operator << (std::ostream& os, const Matrix& m)
     os << "This is Matrix values: val1 = " << m.val1 << ", val2 = " << m.val2 << std::endl;
     return os;
 }
+
+void PrintMatrix (const Matrix& m)
+{
+  std::cout << "This is Matrix values: val1 = " << m.val1 << ", val2 = " << m.val2 << std::endl;
+}
