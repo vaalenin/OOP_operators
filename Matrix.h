@@ -2,8 +2,10 @@
 
 #include <iostream>
 
-std::ostream& operator << (std::ostream& os, const Matrix& dt)
-  
+std::ostream& operator << (std::ostream& os, const Matrix& m)
+
+void PrintMatrix (const Matrix& m);
+
 class Matrix
 {
 public:
@@ -33,6 +35,7 @@ public:
   operator int ();
   
   friend std::ostream& operator << (std::ostream& os, const Matrix& dt);
+  frined void PrintMatrix (const Matrix& dt);
 private:
   int val1;
   int val2;
