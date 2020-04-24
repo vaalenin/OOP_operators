@@ -24,6 +24,32 @@ Matrix& operator ++ (int)
   return *this;
 }
 
+Matrix& Matrix::operator = (const Matrix& m)
+{
+  this->val1 = m.val1;
+  this->val2 = m.val2;
+  
+  return *this;
+}
+
+bool Matrix::operator > (const Matrix& m)
+{
+  return (this->val1 + this->val2) > (m.val1 + m.val2);
+}
+
+int Matrix::operator () ()
+{
+  return this->val1 * this->val2;
+}
+
+int& Matrix::operator [](int index)
+{
+  if (index == 0)
+    return tis->val1;
+  else if (index == 1)
+    return this->val2;
+}
+
 operator int ()
 {
   return this->val1 + this->val2;
