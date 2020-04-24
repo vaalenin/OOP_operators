@@ -11,7 +11,24 @@ public:
   ~Matrix () = default;
   
   Matrix operator+ (const Matrix& m);
+  //Matrix operator- (const Matrix& m);
+  //Matrix operator* (const Matrix& m);
+  //Matrix operator/ (const Matrix& m);
   Matrix& operator ++ (int);
+  //Matrix& operator -- (int);
+  //Matrix& operator ++ ();
+  //Matrix& operator -- ();
+  
+  Matrix& operator = (const Matrix& m);
+  
+  bool operator > (const Matrix& m);
+  //bool operator < (const Matrix& m);
+  //bool operator >= (const Matrix& m);
+  //bool operator <= (const Matrix& m);
+  //bool operator == (const Matrix& m);
+  
+  int operator () ();
+  int& operator [](int index);
   
   operator int ();
   
